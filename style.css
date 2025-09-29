@@ -1,72 +1,81 @@
 /* css da tela pricipal*/
-ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-.submenu {
-    text-align: center;
-}
-  
 body {
     font-family: Arial, sans-serif;
-    background: rgba(27, 168, 161, 0.295);
+    background: rgba(17, 105, 101, 0.295);
     margin: 0;
     padding: 20px;
 }
 
-nav {
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Removido margin-left/right para centralizar melhor */
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
-
 }
-nav a{
+
+nav a {
     display: block;
     text-decoration: none;
-    color:aliceblue;
-    background: #07898d;
+    color: rgb(255, 255, 255);
+    background: #025b5e;
     padding: 12px 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(16, 116, 111, 0.295);
     transition: 0.3s;
-
 }
+
 nav a:hover {
-    background: #07898d;
+    background: #1b8b8f;
     transform: scale(1.05);
 }
 
-/*submenu*/
+/* --- CSS do Dropdown --- */
+
+/* Adicionado position: relative para que o submenu se posicione em relação a este item */
+.menu_item {
+    position: relative; 
+}
+
 .submenu {
     display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-}
-.menu-item:hover .submenu {
-    display: flex;
-}
-.submenu a {
-    background: #cc20b5;
-}
-.submenu a:hover {
-    background: #07898d;
+    position: absolute;
+    top: 100%; /* Posiciona o submenu logo abaixo do item "Aulas" */
+    left: 0;
+    background: #025b5e;
+    border: 1px solid #025b5e;
+    border-radius: 4px;
+    width: 200px;
+    z-index: 10; /* Garante que o submenu fique sobre outros elementos */
 }
 
-nav li {
-    position: relative;
+.submenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block; /* Submenus devem ser verticais */
 }
-.menu-item:hover .submenu {
+
+.submenu li a {
+    display: block;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #025b5e; /* Fundo branco padrão */
+}
+
+.submenu li a:hover {
+    background: #0d95a7;
+    color: rgb(0, 102, 105);
+    transform: none; /* Remove o efeito de escala do menu principal */
+}
+
+/* Mostra o submenu quando o mouse passa sobre o .menu_item */
+.menu_item:hover .submenu {
     display: block;
 }
-
-
-
 /* fim do css da tela pricipal*/
+
 
 /* css da tela de login*/
 
@@ -202,3 +211,312 @@ html, body {
 }
 
 /*fim css pet shop*/
+
+/*
+================================================
+== ESTILOS DA LANDING PAGE GAMETECH           ==
+================================================
+*/
+
+/* --- CONFIGURAÇÕES GERAIS E VARIÁVEIS DE COR --- */
+.page-gametech {
+    --pink-lightest: #FFF0F5; /* Rosa lavanda (fundo alternativo) */
+    --pink-light: #FFD9E6;    /* Rosa claro (detalhes) */
+    --pink-main: #FF8FAB;     /* Rosa principal (botões, links) */
+    --pink-dark: #E85D75;     /* Rosa escuro (hover) */
+    --text-dark: #333;        /* Cor de texto principal */
+    --text-light: #FFFFFF;    /* Cor de texto claro */
+    --bg-light: #FFFFFF;      /* Fundo principal */
+    --border-color: #F0F0F0;  /* Cor da borda sutil */
+    
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Reset específico para a página para não afetar outros HTMLs */
+.page-gametech * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-gametech .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+.page-gametech .main-header {
+    background-color: var(--bg-light);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.page-gametech .main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-gametech .logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--pink-main);
+    text-decoration: none;
+}
+
+.page-gametech .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.page-gametech .main-nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.page-gametech .main-nav a:hover {
+    color: var(--pink-main);
+}
+
+/* --- SEÇÃO HERO (LANÇAMENTO ARK 2) --- */
+.page-gametech .hero-section {
+    background: url('images/ark2-banner.jpg') no-repeat center center/cover;
+    color: var(--text-light);
+    text-align: left;
+    padding: 8rem 0;
+    position: relative;
+}
+
+.page-gametech .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.page-gametech .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.page-gametech .hero-content .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--pink-light);
+}
+
+.page-gametech .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.page-gametech .hero-content .description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/*
+================================================
+== ESTILOS DA LANDING PAGE GAMETECH           ==
+================================================
+*/
+
+/* ... (mantenha o resto do seu CSS da GameTECH como está) ... */
+
+
+/* --- BOTÕES (CORRIGIDO COM MAIOR ESPECIFICIDADE) --- */
+.page-gametech .btn-primary, 
+.page-gametech .btn-secondary, 
+.page-gametech .btn-tertiary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer; /* Adicionado para mostrar a mãozinha */
+}
+
+/* Botão Primário (Ex: "Compre na Pré-Venda") */
+.page-gametech #lancamento-ark2 .btn-primary {
+    background-color: var(--pink-main) !important; /* Força a cor rosa */
+    color: var(--text-light) !important;
+}
+
+.page-gametech #lancamento-ark2 .btn-primary:hover {
+    background-color: var(--pink-dark) !important;
+    transform: translateY(-3px);
+}
+
+/* Botão Secundário (Ex: "Ver Detalhes" nas promoções) */
+.page-gametech #promocoes .btn-secondary {
+    background-color: transparent !important;
+    color: var(--pink-main) !important;
+    border: 2px solid var(--pink-main) !important;
+}
+
+.page-gametech #promocoes .btn-secondary:hover {
+    background-color: var(--pink-main) !important;
+    color: var(--text-light) !important;
+}
+
+/* Botão Terciário (Ex: "Comprar" nos cards de produtos) */
+.page-gametech .product-card .btn-tertiary {
+    background-color: var(--pink-lightest) !important;
+    color: var(--pink-dark) !important;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+}
+
+.page-gametech .product-card .btn-tertiary:hover {
+    background-color: var(--pink-light) !important;
+}
+
+/* --- SEÇÃO DE PROMOÇÕES --- */
+.page-gametech .promo-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.page-gametech .promo-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.page-gametech .promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.page-gametech .promo-card {
+    background-color: var(--bg-light);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-gametech .promo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+
+.page-gametech .promo-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-gametech .promo-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-gametech .promo-info p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.page-gametech .promo-info .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pink-main);
+    margin-bottom: 1.5rem;
+}
+
+/* --- SEÇÕES DE CONTEÚDO (GAMES E ACESSÓRIOS) --- */
+.page-gametech .content-section {
+    padding: 4rem 0;
+}
+
+.page-gametech .content-section.alternate-bg {
+    background-color: var(--pink-lightest);
+}
+
+.page-gametech .content-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.page-gametech .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.page-gametech .product-card {
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-gametech .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(232, 93, 117, 0.2);
+}
+
+.page-gametech .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.page-gametech .product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-gametech .product-card .product-price {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--pink-main);
+    margin-bottom: 1rem;
+}
+
+/* --- RODAPÉ --- */
+.page-gametech .main-footer {
+    background-color: #333;
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.page-gametech .main-footer .credits {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+
+/*fim css gamers*/
