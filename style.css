@@ -520,3 +520,48 @@ html, body {
 }
 
 /*fim css gamers*/
+
+
+/* inicio tabela periodica*/
+.row .col{
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 10px
+}
+
+.row #AR{
+    background-color: #add8e6;
+}
+
+.row #MT{
+    background-color: #e6e6;
+}
+
+.row #MPT{
+    background-color: #90ee90;
+}
+
+.row #SM{
+    background-color: #ffdab9;
+}
+
+.row #MAT{
+    background-color: #d87977;
+}
+
+.row #LAN{
+    background-color: #87CEEB;
+}
+
+.row #AC{
+    background-color: #d6a982;
+}
+
+.row #PD{
+    background-color: #92989b;
+}
+.row #MA{
+    background-color: #a2fdfd;
+}
+
+
+/* fim tabela periodica*/
