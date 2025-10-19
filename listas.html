@@ -1,28 +1,84 @@
-<html>
-  <head></head>
-  <body>
-    <h1>Listas</h1>
-    <p>Uma <b>forma</b>
-      <mark>produtiva</mark> de organizar conteúdos.</p>
-    <h2>Listas ordenadas</h2>
-    <ol>
-      <li>Frequência ondas de rádio: 3 kilohertz (kHz) até 300 gigahertz (GHz). </li>
-      <li>Frequência micro-ondas: entre 300 MHz e 300 GHz.</li>
-      <li>Frequência radiação infra vermelha: aproximadamente 300 GHz (ou 3 x 10¹¹ Hz) a 430 THz (ou 4,3 x 10¹⁴ Hz).</li>
-      <li>Frequência luz visível: aproximadamente de 400 Terahertz (THz) a 790 THz.</li>
-      <li>Frequência ultravioleta: entre 8 x 10^14 Hz e 3 x 10^16 Hz.</li>
-      <li>Frequência raios x : entre 3 x 10¹⁶ Hz e 3 x 10¹⁹ Hz.</li>
-      <li>Frequência raios gama: geralmente superior a 10¹⁹ Hz.</li>
-    </ol>
-    <h2>Listas não ordenadas</h2>
-    <ul>
-      <li>Azul</li>
-      <li>Vermelho</li>
-      <li>Amarelo</li>
-      <li>Verde</li>
-      <li>Laranja</li>
-      <li>Anil</li>
-      <li>Violeta</li>
-    </ul>
-  </body>
-  </html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quem_sou_eu.html">Quem sou eu?</a></li>
+            <li class="menu_item">
+                <a href="#">Aulas</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Resumo do curso</a></li>
+                        <li><a href="tabelas.html">Tabelas</a></li>
+                        <li><a href="listas.html">Listas</a></li>
+                        <li><a href="formulario.html">Formulários</a></li>
+                        <li><a href="clínica.html">Formulário Clínica Odontológica</a></li>
+                        <li><a href="#">Menus</a></li>
+                        <li><a href="petshop.html">PetShop</a></li>
+                        <li><a href="#">Cards</a></li>
+                        <li><a href="tela.html">Tela de Login</a></li>
+                        <li><a href="telahosp.html">Tela de Login Hospital</a></li>
+                        <li><a href="games.html">Gamers</a></li>
+                        <li><a href="tabelaperiodica.html">Tabela Periódica</a></li>
+                        <li><a href="fotografia.html">Ensaio Fotográfico</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contatos.html">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Listas</h1>
+        <p>Uma <b>forma</b>
+            <mark>produtiva</mark> de organizar conteúdos.</p>
+        <h2>Listas ordenadas</h2>
+        <ol>
+            <li>Frequência ondas de rádio: 3 kilohertz (kHz) até 300 gigahertz (GHz). </li>
+            <li>Frequência micro-ondas: entre 300 MHz e 300 GHz.</li>
+            <li>Frequência radiação infra vermelha: aproximadamente 300 GHz (ou 3 x 10¹¹ Hz) a 430 THz (ou 4,3 x 10¹⁴ Hz).</li>
+            <li>Frequência luz visível: aproximadamente de 400 Terahertz (THz) a 790 THz.</li>
+            <li>Frequência ultravioleta: entre 8 x 10^14 Hz e 3 x 10^16 Hz.</li>
+            <li>Frequência raios x : entre 3 x 10¹⁶ Hz e 3 x 10¹⁹ Hz.</li>
+            <li>Frequência raios gama: geralmente superior a 10¹⁹ Hz.</li>
+        </ol>
+        <h2>Listas não ordenadas</h2>
+        <ul>
+            <li>Azul</li>
+            <li>Vermelho</li>
+            <li>Amarelo</li>
+            <li>Verde</li>
+            <li>Laranja</li>
+            <li>Anil</li>
+            <li>Violeta</li>
+        </ul>
+    </div>
+
+    <button onclick="topFunction()" id="back-to-top" title="Voltar ao Topo">&#9650;</button>
+
+    <script>
+        let mybutton = document.getElementById("back-to-top");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

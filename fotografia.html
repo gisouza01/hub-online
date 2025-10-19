@@ -1,73 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ensaios Fotográficos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .carousel-image-fixed {
+        height: 460px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .carousel-image-fixed1 {
+        height: 700px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .titulo {
+        text-align: center;
+        text-shadow: 2px 3px 4px rgba(0, 217, 213, 0.6);
+        color: rgb(0, 0, 0);
+      }
+
+      .card { 
+        margin: 0 auto;
+        display: block;
+      }
+
+      .hexagonal-background {
+        background-color: #005f5e;
+        background-image: 
+            repeating-linear-gradient(
+                120deg,
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.1) 1px,
+                transparent 1px,
+                transparent 60px
+            ),
+            repeating-linear-gradient(
+                60deg,
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.1) 1px,
+                transparent 1px,
+                transparent 60px
+            ),
+            linear-gradient(
+                60deg,
+                rgba(0, 0, 0, 0.1) 25%,
+                transparent 25%,
+                transparent 75%,
+                rgba(0, 0, 0, 0.1) 75%,
+                rgba(0, 0, 0, 0.1)
+            ),
+            linear-gradient(
+                120deg,
+                rgba(0, 0, 0, 0.1) 25%,
+                transparent 25%,
+                transparent 75%,
+                rgba(0, 0, 0, 0.1) 75%,
+                rgba(0, 0, 0, 0.1)
+            );
+        background-size: 70px 120px;
+      }
+    </style>
 </head>
-<style>
-  .carousel-image-fixed {
-height: 460px; /* Defina a altura que desejar */
-object-fit: cover; /* Esta é a propriedade mágica! */
-object-position: center; /* Opcional: centraliza a imagem */
-}
-
-  .carousel-image-fixed1 {
-height: 700px; /* Defina a altura que desejar */
-object-fit: cover; /* Esta é a propriedade mágica! */
-object-position: center; /* Opcional: centraliza a imagem */
-}
-
-  .titulo {
-  text-align: center;
-  text-shadow: 2px 3px 4px rgba(0, 217, 213, 0.6);
-  color: rgb(0, 0, 0);
-}
-
-  .card { 
-  margin: 0 auto;
-  display: block;
-}
-
-  .hexagonal-background {
-            background-color: #005f5e; /* Cor de fundo base */
-            background-image: 
-                repeating-linear-gradient(
-                    120deg,
-                    rgba(255, 255, 255, 0.1),
-                    rgba(255, 255, 255, 0.1) 1px,
-                    transparent 1px,
-                    transparent 60px
-                ),
-                repeating-linear-gradient(
-                    60deg,
-                    rgba(255, 255, 255, 0.1),
-                    rgba(255, 255, 255, 0.1) 1px,
-                    transparent 1px,
-                    transparent 60px
-                ),
-                linear-gradient(
-                    60deg,
-                    rgba(0, 0, 0, 0.1) 25%,
-                    transparent 25%,
-                    transparent 75%,
-                    rgba(0, 0, 0, 0.1) 75%,
-                    rgba(0, 0, 0, 0.1)
-                ),
-                linear-gradient(
-                    120deg,
-                    rgba(0, 0, 0, 0.1) 25%,
-                    transparent 25%,
-                    transparent 75%,
-                    rgba(0, 0, 0, 0.1) 75%,
-                    rgba(0, 0, 0, 0.1)
-                );
-            background-size: 70px 120px; /* Tamanho do padrão hexagonal */
-        }
-
-</style>
 <body class="hexagonal-background">
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quem_sou_eu.html">Quem sou eu?</a></li>
+            <li class="menu_item">
+                <a href="#">Aulas</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Resumo do curso</a></li>
+                        <li><a href="tabelas.html">Tabelas</a></li>
+                        <li><a href="listas.html">Listas</a></li>
+                        <li><a href="formulario.html">Formulários</a></li>
+                        <li><a href="clínica.html">Formulário Clínica Odontológica</a></li>
+                        <li><a href="#">Menus</a></li>
+                        <li><a href="petshop.html">PetShop</a></li>
+                        <li><a href="#">Cards</a></li>
+                        <li><a href="tela.html">Tela de Login</a></li>
+                        <li><a href="telahosp.html">Tela de Login Hospital</a></li>
+                        <li><a href="games.html">Gamers</a></li>
+                        <li><a href="tabelaperiodica.html">Tabela Periódica</a></li>
+                        <li><a href="fotografia.html">Ensaio Fotográfico</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contatos.html">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <body class="hexagonal-background">
     <br><br>
     <article>
       <h1 class="titulo">ENSAIO DE 15 ANOS</h1>

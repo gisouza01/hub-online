@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Hospital</title>
+    <title>Contatos - Giovanna Souza</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,33 +35,35 @@
         </ul>
     </nav>
 
-    <div class="container telahosp">
-        <form id="loginForm">
-            <h2 class="titulo">Login do Profissional de Saúde</h2>
-            <b><label for="matricula">Matrícula</label></b>
-            <br>
-            <input type="text" id="matricula" name="matricula"
-        placeholder="Digite sua matrícula" required />
-        <br><br>
-            <b><label for="senha">Senha</label></b>
-            <br>
-            <input type="password" id="senha" name="senha"
-        placeholder="Digite sua senha" required />
-        <br><br>
-            <b><label for="cargo">Cargo</label></b>
-            <br>
-            <select id="cargo" name="cargo" required>
-            <option value="" disabled selected>Selecione seu
-        cargo</option>
-        <br>
-            <option value="Medicina">Médico</option>
-            <option value="Enfermagem">Enfermeiro</option>
-            <option value="Odontologia">Farmacêutico</option>
-            <option value="outras">Psicologia</option>
-            </select>
-            <br><br>
-            <b><button  class="botao" id="botao_1" type="submit">ENTRAR</button></b>
-        </form>
+    <div class="container">
+        <section class="contact-section">
+            <h1>Entre em Contato!</h1>
+            <p>Ficarei feliz em receber suas mensagens, sugestões ou oportunidades de colaboração. Utilize o formulário abaixo para me enviar uma mensagem, ou conecte-se comigo através das redes sociais!</p>
+            
+            <div class="contact-form">
+                <form action="#" method="POST"> <!-- O action pode ser atualizado para um backend real -->
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject">
+
+                    <label for="message">Sua Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+
+            <div class="social-media-links" style="margin-top: 40px;">
+                <h2>Conecte-se Comigo</h2>
+                <p>Em breve, links para minhas redes sociais e portfólio!</p>
+                <!-- Aqui você pode adicionar ícones e links para LinkedIn, GitHub, etc. -->
+            </div>
+        </section>
     </div>
 
     <button onclick="topFunction()" id="back-to-top" title="Voltar ao Topo">&#9650;</button>
@@ -83,6 +85,6 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-    <script src="script.js"></script>
 </body>
 </html>
+

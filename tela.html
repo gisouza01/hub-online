@@ -1,27 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tela de Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="telalog">
-    <h1 class="titulo">Tela de Login</h1>
-<div class="dvis">
-    <!--E-mail-->
-    <label for="email" >E-mail:</label>
-    <input type="email" id="email" name="email" placeholder="Digite seu E-mail">
-    <br>
-    <br>
-    <!--Senha-->
-    <label for="password">Senha:</label>
-    <input type="password" id="password" name="password" placeholder="Digite sua senha">
-    <br><br>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quem_sou_eu.html">Quem sou eu?</a></li>
+            <li class="menu_item">
+                <a href="#">Aulas</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Resumo do curso</a></li>
+                        <li><a href="tabelas.html">Tabelas</a></li>
+                        <li><a href="listas.html">Listas</a></li>
+                        <li><a href="formulario.html">Formulários</a></li>
+                        <li><a href="clínica.html">Formulário Clínica Odontológica</a></li>
+                        <li><a href="#">Menus</a></li>
+                        <li><a href="petshop.html">PetShop</a></li>
+                        <li><a href="#">Cards</a></li>
+                        <li><a href="tela.html">Tela de Login</a></li>
+                        <li><a href="telahosp.html">Tela de Login Hospital</a></li>
+                        <li><a href="games.html">Gamers</a></li>
+                        <li><a href="tabelaperiodica.html">Tabela Periódica</a></li>
+                        <li><a href="fotografia.html">Ensaio Fotográfico</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contatos.html">Contatos</a></li>
+        </ul>
+    </nav>
 
-    <button class="botao" id="botao_1">ENTRAR</button>
-</div>
-<script src="script.js"></script>
+    <div class="container">
+        <h1 class="titulo">Tela de Login</h1>
+        <div class="dvis">
+            <!--E-mail-->
+            <label for="email" >E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu E-mail">
+            <br>
+            <br>
+            <!--Senha-->
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha">
+            <br><br>
+
+            <button class="botao" id="botao_1">ENTRAR</button>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="back-to-top" title="Voltar ao Topo">&#9650;</button>
+
+    <script>
+        let mybutton = document.getElementById("back-to-top");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-

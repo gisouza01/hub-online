@@ -1,165 +1,220 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <link rel="stylesheet" href="style.css">
     <style>
       table, th, td {
         border: 2px solid #FF1493;
-        border-collapse: center;
+        border-collapse: collapse; /* Alterado de center para collapse */
         padding: 8px;
         text-align: center;
       }
     </style>
-  </head>
-  <body>
-    <h1>Tabelas</h1>
-    <table>
-      <thead>
-        <tr>
-        <th>Time </th>
-        <th>Pontos</th>
-          ,
-        <th>Vitórias</th>
-        <th>Empates</th>
-        <th>Derrotas</th>
-        <th>Saldo de gols</th>
-        </tr>
-      </thead>
-    <tbody>
-      <tr>
-        <td>Flamengo</td>
-        <td>46</td>
-        <td>14</td>
-        <td>4</td>
-        <td>2</td>
-        <td>35</td>
-       </tr>
-      <tr>
-        <td>Palmeiras</td>
-        <td>42</td>
-        <td>13</td>
-        <td>3</td>
-        <td>3</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td>Cruzeiro</td>
-        <td>41</td>
-        <td>12</td>
-        <td>5</td>
-        <td>4</td>
-        <td>19</td>
-      </tr>
-      <tr>
-        <td>Bahia</td>
-        <td>36</td>
-        <td>10</td>
-        <td>6</td>
-        <td>3</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>Botafogo</td>
-        <td>32</td>
-        <td>9</td>
-        <td>5</td>
-        <td>5</td>
-        <td>14</td>
-      </tr>
-      <tr>
-        <td>Mirassol</td>
-        <td>32</td>
-        <td>8</td>
-        <td>8</td>
-        <td>3</td>
-        <td>11</td>
-      </tr>
-      <tr>
-        <td>São Paulo</td>
-        <td>32</td>
-        <td>8</td>
-        <td>8</td>
-        <td>5</td>
-        <td>4</td>
-      </tr>
-      <tr>
-        <td>Bragantino</td>
-        <td>30</td>
-        <td>9</td>
-        <td>3</td>
-        <td>9</td>
-        <td>-2</td>
-      </tr>
-      <tr>
-        <td>Fluminense</td>
-        <td>27</td>
-        <td>8</td>
-        <td>3</td>
-        <td>8</td>
-        <td>-3</td>
-      </tr>
-      <tr>
-        <td>Ceará</td>
-        <td>26</td>
-        <td>7</td>
-        <td>5</td>
-        <td>8</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>Corinthians</td>
-        <td>25</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>-5</td>
-      </tr>
-      <tr>
-        <td>Atlético-MG</td>
-        <td>24</td>
-        <td>6</td>
-        <td>6</td>
-        <td>7</td>
-        <td>-3</td>
-      </tr>
-      <tr>
-        <td>Internacional</td>
-        <td>24</td>
-        <td>6</td>
-        <td>6</td>
-        <td>8</td>
-        <td>-5</td>
-      </tr>
-      <tr>
-        <td>Grêmio</td>
-        <td>24</td>
-        <td>6</td>
-        <td>6</td>
-        <td>8</td>
-        <td>-6</td>
-      </tr>
-      <tr>
-        <td>Santos</td>
-        <td>21</td>
-        <td>6</td>
-        <td>3</td>
-        <td>11</td>
-        <td>-11</td>
-      </tr>
-      <tr>
-        <td>Vasco</td>
-        <td>19</td>
-        <td>5</td>
-        <td>4</td>
-        <td>11</td>
-        <td>-2</td>
-      </tr>
-      <tr>
-        <td>Vitória</td>
-        <td>19</td>
-        <td>3</td>
-        <td>10</td>
-        <td>8</td>
-        <td>-14</td>
-      </tr>
-    </tbody>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quem_sou_eu.html">Quem sou eu?</a></li>
+            <li class="menu_item">
+                <a href="#">Aulas</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Resumo do curso</a></li>
+                        <li><a href="tabelas.html">Tabelas</a></li>
+                        <li><a href="listas.html">Listas</a></li>
+                        <li><a href="formulario.html">Formulários</a></li>
+                        <li><a href="clínica.html">Formulário Clínica Odontológica</a></li>
+                        <li><a href="#">Menus</a></li>
+                        <li><a href="petshop.html">PetShop</a></li>
+                        <li><a href="#">Cards</a></li>
+                        <li><a href="tela.html">Tela de Login</a></li>
+                        <li><a href="telahosp.html">Tela de Login Hospital</a></li>
+                        <li><a href="games.html">Gamers</a></li>
+                        <li><a href="tabelaperiodica.html">Tabela Periódica</a></li>
+                        <li><a href="fotografia.html">Ensaio Fotográfico</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contatos.html">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Tabelas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time </th>
+                    <th>Pontos</th>
+                    <th>Vitórias</th>
+                    <th>Empates</th>
+                    <th>Derrotas</th>
+                    <th>Saldo de gols</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Flamengo</td>
+                    <td>46</td>
+                    <td>14</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Palmeiras</td>
+                    <td>42</td>
+                    <td>13</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Cruzeiro</td>
+                    <td>41</td>
+                    <td>12</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td>36</td>
+                    <td>10</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Botafogo</td>
+                    <td>32</td>
+                    <td>9</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Mirassol</td>
+                    <td>32</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td>32</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Bragantino</td>
+                    <td>30</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <td>Fluminense</td>
+                    <td>27</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>-3</td>
+                </tr>
+                <tr>
+                    <td>Ceará</td>
+                    <td>26</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Corinthians</td>
+                    <td>25</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>-5</td>
+                </tr>
+                <tr>
+                    <td>Atlético-MG</td>
+                    <td>24</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>-3</td>
+                </tr>
+                <tr>
+                    <td>Internacional</td>
+                    <td>24</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>-5</td>
+                </tr>
+                <tr>
+                    <td>Grêmio</td>
+                    <td>24</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>-6</td>
+                </tr>
+                <tr>
+                    <td>Santos</td>
+                    <td>21</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>-11</td>
+                </tr>
+                <tr>
+                    <td>Vasco</td>
+                    <td>19</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>11</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <td>Vitória</td>
+                    <td>19</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>-14</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button onclick="topFunction()" id="back-to-top" title="Voltar ao Topo">&#9650;</button>
+
+    <script>
+        let mybutton = document.getElementById("back-to-top");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

@@ -13,22 +13,33 @@
 </head>
 <body class="page-gametech">  <!-- <<<< MUDANÇA PRINCIPAL AQUI -->
 
-    <!-- CABEÇALHO E MENU -->
-    <header class="main-header">
-        <div class="container">
-            <a href="#" class="logo">
-                <span class="logo-text">GameTECH</span>
-            </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#games">Games</a></li>
-                    <li><a href="#acessorios">Acessórios</a></li>
-                    <li><a href="#promocoes">Promoções</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quem_sou_eu.html">Quem sou eu?</a></li>
+            <li class="menu_item">
+                <a href="#">Aulas</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#">Resumo do curso</a></li>
+                        <li><a href="tabelas.html">Tabelas</a></li>
+                        <li><a href="listas.html">Listas</a></li>
+                        <li><a href="formulario.html">Formulários</a></li>
+                        <li><a href="clínica.html">Formulário Clínica Odontológica</a></li>
+                        <li><a href="#">Menus</a></li>
+                        <li><a href="petshop.html">PetShop</a></li>
+                        <li><a href="#">Cards</a></li>
+                        <li><a href="tela.html">Tela de Login</a></li>
+                        <li><a href="telahosp.html">Tela de Login Hospital</a></li>
+                        <li><a href="games.html">Gamers</a></li>
+                        <li><a href="tabelaperiodica.html">Tabela Periódica</a></li>
+                        <li><a href="fotografia.html">Ensaio Fotográfico</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contatos.html">Contatos</a></li>
+        </ul>
+    </nav>
 
     <main>
         <!-- SEÇÃO DE LANÇAMENTO (ARK 2 ) -->
@@ -137,5 +148,24 @@
         </div>
     </footer>
 
+    <button onclick="topFunction()" id="back-to-top" title="Voltar ao Topo">&#9650;</button>
+
+    <script>
+        let mybutton = document.getElementById("back-to-top");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
